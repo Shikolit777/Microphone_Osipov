@@ -23,4 +23,12 @@ public class MainActivity extends AppCompatActivity {
     private MediaRecorder mediaRecorder;
     private MediaPlayer mediaPlayer;
     private String fileName;
+    private void releaseRecorder()
+    {
+        if(mediaRecorder != null)
+        {
+            mediaRecorder.release();
+            mediaRecorder = null;
+        }
+    }
 }
