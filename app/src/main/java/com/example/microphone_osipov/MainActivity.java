@@ -72,4 +72,19 @@ public class MainActivity extends AppCompatActivity {
             mediaPlayer = null;
         }
     }
+    private void playStart(View v)
+    {
+        try
+        {
+            releasePlayer();
+            mediaPlayer = new MediaPlayer();
+            mediaPlayer.setDataSource(fileName);
+            mediaPlayer.prepare();
+            mediaPlayer.start();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
 }
