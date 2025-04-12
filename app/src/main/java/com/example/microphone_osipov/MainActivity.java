@@ -94,4 +94,11 @@ public class MainActivity extends AppCompatActivity {
             mediaPlayer.stop();
         }
     }
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        releasePlayer();
+        releaseRecorder();
+    }
 }
